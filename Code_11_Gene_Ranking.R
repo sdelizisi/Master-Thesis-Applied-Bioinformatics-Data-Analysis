@@ -3,9 +3,6 @@
 # Code 11
 # === Transform Counts to Ranks ===
 
-# === Libraries ===
-# No additional libraries are required as we use base R functions.
-
 # === Define Input and Output Files ===
 input_file  <- "C:\\Users\\User\\Desktop\\Soultana\\Msc Bioinformatics\\Διπλωματική-Msc\\07_Miscellaneous\\Sfikakis_Yavropoulou\\RNA-seq\\files\\GeTMM_normalized_counts.txt"
 output_file <- "C:\\Users\\User\\Desktop\\Soultana\\Msc Bioinformatics\\Διπλωματική-Msc\\07_Miscellaneous\\Sfikakis_Yavropoulou\\RNA-seq\\files\\Counted_Batch1_2_RawRead_PC_ranked.txt"
