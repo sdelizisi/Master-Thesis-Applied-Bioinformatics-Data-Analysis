@@ -7,7 +7,7 @@
 import pandas as pd
 
 # === Define Absolute File Paths ===
-# 1. Input: The original full matrix with all 78,714 genes across the 40 biological samples
+# 1. Input: The original full matrix with all 78,724 genes across the 40 biological samples
 full_matrix_path = r"C:\Users\User\Desktop\Soultana\Msc Bioinformatics\Διπλωματική-Msc\07_Miscellaneous\Sfikakis_Yavropoulou\RNA-seq\files\Counted_Batch1_2_RawRead_PC_ranked.txt"
 
 # 2. Input: The finalized table of the top 500 genes (with Ensembl IDs and Gene Symbols)
@@ -25,7 +25,7 @@ full_df.rename(columns={full_df.columns[0]: 'Ensembl_ID'}, inplace=True)
 # Load the top 500 annotated features table
 top_500_df = pd.read_csv(top_500_mapped_path, sep='\t')
 
-# This operation automatically discards the remaining 78,214 non-top features
+# This operation automatically discards the remaining 78,224 non-top features
 merged_df = pd.merge(top_500_df[['Ensembl_ID']], full_df, on='Ensembl_ID', how='inner')
 
 # === Export Finalized Subset Matrix ===
