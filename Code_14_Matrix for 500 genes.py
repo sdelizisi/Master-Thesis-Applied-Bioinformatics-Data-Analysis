@@ -34,10 +34,3 @@ merged_df.to_csv(output_matrix_path, sep='\t', index=False)
 print(f"\nSuccess! The target subset matrix was successfully generated.")
 print(f"File saved to: {output_matrix_path}")
 print(f"Matrix Dimensions -> Rows (Genes): {merged_df.shape[0]} | Columns (Ensembl ID + 40 Samples): {merged_df.shape[1]}")
-
-
-
-
-
-for i, sample_name in enumerate(X_full.index):
-  print(f"{i}: {sample_name}")
