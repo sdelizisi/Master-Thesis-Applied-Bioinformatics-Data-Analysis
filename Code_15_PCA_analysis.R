@@ -2,7 +2,7 @@
 library(ggplot2)
 library(patchwork)
 
-# 1. Define File Paths (using proper forward slashes '/' to avoid escape errors)
+# 1. Define File Paths
 full_path     <- "C:/Users/User/Desktop/Soultana/Msc Bioinformatics/Διπλωματική-Msc/07_Miscellaneous/Sfikakis_Yavropoulou/RNA-seq/files/Counted_Batch1_2_RawRead_PC_ranked.txt"
 filtered_path <- "C:/Users/User/Desktop/Soultana/Msc Bioinformatics/Διπλωματική-Msc/07_Miscellaneous/Sfikakis_Yavropoulou/RNA-seq/files/Filtered_Top500_Ranked_Matrix.txt"
 
