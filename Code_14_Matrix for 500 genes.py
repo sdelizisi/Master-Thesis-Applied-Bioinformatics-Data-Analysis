@@ -39,17 +39,5 @@ print(f"Matrix Dimensions -> Rows (Genes): {merged_df.shape[0]} | Columns (Ensem
 
 
 
-import pandas as pd
-
-# 1. Ορισμός διαδρομής και φόρτωση καθολικού πίνακα
-full_matrix_path = r"C:\Users\User\Desktop\Soultana\Msc Bioinformatics\Διπλωματική-Msc\07_Miscellaneous\Sfikakis_Yavropoulou\RNA-seq\files\Counted_Batch1_2_RawRead_PC_ranked.txt"
-full_df = pd.read_csv(full_matrix_path, sep="\t")
-full_df.rename(columns={full_df.columns[0]: "Ensembl_ID"}, inplace=True)
-
-# 2. Δημιουργία του X_full (μετά το transpose τα δείγματα είναι στις γραμμές)
-X_full = full_df.drop(columns=["Ensembl_ID"]).T
-
-# 3. Εκτύπωση των ονομάτων των δειγμάτων στη σειρά
-print("Σειρά δειγμάτων στον πίνακα:")
 for i, sample_name in enumerate(X_full.index):
   print(f"{i}: {sample_name}")
