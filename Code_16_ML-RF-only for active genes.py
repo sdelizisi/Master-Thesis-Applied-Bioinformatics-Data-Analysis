@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # === ML Predictions with Random Forest (Filtered Feature Importance > 0, 100/0 Strategy) ===
-# This script filters the ranked dataset to keep ONLY genes with an Importance Score > 0,
+# This script filters the ranked dataset to keep only genes with an Importance Score > 0,
 # trains a RandomForest classifier on 100% of the data, and evaluates resubstitution performance.
 
 # === Libraries ===
@@ -61,11 +61,10 @@ def evaluate_model(classifier, X_train, y_train):
     roc_auc = auc(fpr, tpr)
     print(f"AUC Score (Resubstitution): {roc_auc:.4f}")
 
-    # Ορισμός διαδρομής φακέλου και αυτόματη δημιουργία αν δεν υπάρχει
     target_dir = r"C:\Users\User\Desktop\Soultana\Msc Bioinformatics\Διπλωματική-Msc\07_Miscellaneous\Sfikakis_Yavropoulou\RNA-seq\files"
     os.makedirs(target_dir, exist_ok=True)
 
-    # 1ο Διάγραμμα
+    # 1st Plot
     plt.figure()  
     RocCurveDisplay.from_predictions(
         y_train, 
@@ -96,7 +95,7 @@ def evaluate_model(classifier, X_train, y_train):
     accuracy = accuracy_score(y_train, mylist)
     print(f"Accuracy: {accuracy:.4f}")
 
-    # 2ο Διάγραμμα
+    # 2nd Plot
     plt.figure()  
     plt.title('Receiver Operating Characteristic (Resubstitution)')
     plt.plot(fpr, tpr, 'b', label=f'AUC = {roc_auc:.4f}')
